@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Drawing Board</title>
+    <link rel="shortcut icon" href="/assets/icon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Delicious+Handrawn&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="main.js"></script>
+  </head>
+  <body>
+    <div class="container text-center mt-5">
+        <header>
+      <h1 class="delicious-handrawn-regular mb-2">Drawing Board</h1>
+      <p class="delicious-handrawn-regular mb-2">Draw your ideas here:</p>
+    </header>
+      <div class="canvas-frame">
+        <canvas
+          id="myCanvas"
+          width="1000"
+          height="500"
+          class="border border-dark"
+          onmouseenter="begin()"
+          onmousedown="begin()"
+          onmousemove="paint(event)"
+        ></canvas>
+      </div>
+      <div id="buttonsDiv" class="mt-4">
+        <div id="colorsDiv" class="mb-3">
+          <p class="delicious-handrawn-regular mb-2">Color:</p>
+          <button class="btn btn-danger mx-1" onclick='color("red")'></button>
+          <button class="btn btn-primary mx-1" onclick='color("blue")'></button>
+          <button
+            class="btn btn-success mx-1"
+            onclick='color("green")'
+          ></button>
+          <button
+            class="btn btn-warning mx-1"
+            onclick='color("yellow")'
+          ></button>
+          <button
+            class="btn btn-purple mx-1"
+            onclick='color("purple")'
+          ></button>
+          <button class="btn btn-brown mx-1" onclick='color("brown")'></button>
+          <button
+            class="btn btn-orange mx-1"
+            onclick='color("orange")'
+          ></button>
+          <button class="btn btn-black mx-1" onclick='color("black")'></button>
+          <button onclick="color(randColor())"   class="btn btn-white mx-1" title="Random Color">🔀</button>
+          <button onclick="clearCanvas()" class="btn btn-white mx-1" title="Clear">❌</button>
+          <button onclick="randomLetter()" class="btn btn-white mx-1" title="Draw random letter!">✒️</button>
+        </div>
+        <div id="brushDiv">
+          <p class="delicious-handrawn-regular mb-2">Brush Thickness:</p>
+          <button class="btn btn-light border mx-1" onclick="thickness(2)">
+            1
+          </button>
+          <button class="btn btn-light border mx-1" onclick="thickness(4)">
+            2
+          </button>
+          <button class="btn btn-light border mx-1" onclick="thickness(6)">
+            3
+          </button>
+          <button class="btn btn-light border mx-1" onclick="thickness(8)">
+            4
+          </button>
+          <button class="btn btn-light border mx-1" onclick="thickness(10)">
+            5
+          </button>
+          <button class="btn btn-light border mx-1" onclick="thickness(12)">
+            6
+          </button>
+          <button class="btn btn-light border mx-1" onclick="thickness(14)">
+            7
+          </button>
+          <button class="btn btn-light border mx-1" onclick="thickness(16)">
+            8
+          </button>
+          <button class="btn btn-light border mx-1" onclick="thickness(18)">
+            9
+          </button>
+          <button class="btn btn-light border mx-1" onclick="thickness(20)">
+            10
+          </button>
+        </div>
+      </div>
+    </div>
+    <footer>
+        Made By Omri
+    </footer>
+  </body>
+</html>
